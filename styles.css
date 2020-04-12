@@ -26,6 +26,13 @@ body {
   line-height: 39px;
   color: #f44336;
 }
+#instruction {
+  -webkit-border-radius: 0px;
+     -moz-border-radius: 0px;
+          border-radius: 0px;
+  margin-top: 0px;
+  margin-left: 913.3px;
+}
 .result-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -71,7 +78,7 @@ footer {
   margin-bottom: 10px !important;
 }
 .a__side {
-  margin-top: 40px;
+  margin-top: 5px;
   margin-bottom: 5px;
 }
 .second-part__wrapper {
@@ -275,6 +282,65 @@ input:focus + label {
   -o-transform: translateY(-20px);
   -ms-transform: translateY(-20px);
   transform: translateY(-20px);
+}
+.modal-window {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.25);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.modal-window:target {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal-window > div {
+  width: 600px;
+  position: absolute;
+  border: 2px solid black;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+   -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+       transform: translate(-50%, -50%);
+  padding: 2em;
+  background: #ffffff;
+}
+.modal-window > div p {
+  margin-bottom: 5px;
+}
+.modal-window header {
+  font-weight: bold;
+}
+.modal-window h1 {
+  font-size: 150%;
+  margin: 0 0 15px;
+}
+.modal-close {
+  color: #aaa;
+  line-height: 50px;
+  font-size: 80%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 70px;
+  text-decoration: none;
+}
+.modal-close:hover {
+  color: black;
 }
 /**
  * Global Reset of all HTML Elements
